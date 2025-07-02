@@ -124,3 +124,5 @@ ssh() {
     fi
 }
 
+eval SSH_AUTH_SOCK=/tmp/ssh-npm6oxZ6yB2p/agent.937667; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=937668; export SSH_AGENT_PID;
