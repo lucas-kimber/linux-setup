@@ -282,3 +282,6 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Transparency
+ for_window [class="Code"] opacity 0.95
