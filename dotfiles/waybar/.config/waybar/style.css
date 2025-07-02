@@ -1,0 +1,277 @@
+@import "colors.css";
+
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 7px 7px 7px 7px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @hover-shadow;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.visible {
+    box-shadow: inset 0 -3px @hover-shadow;
+}
+
+
+#workspaces button.focused {
+    background-color: @background;
+}
+
+#workspaces button.urgent {
+    background-color: @workspace-urgent;
+}
+
+#mode {
+    background-color: @mode-bg;
+    border-bottom: 3px solid @mode-border;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 10px;
+    color: @text;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @bg-clock;
+}
+
+#battery {
+    background-color: @bg-battery;
+    color: @battery;
+}
+
+#battery.charging, #battery.plugged {
+    color: @text;
+    background-color: @battery-charging;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @text-dark;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @battery-critical-bg;
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: @text-dark;
+}
+
+#cpu {
+    background-color: @bg-cpu;
+    color: @text-dark;
+}
+
+#memory {
+    background-color: @bg-memory;
+}
+
+#disk {
+    background-color: @bg-disk;
+}
+
+#backlight {
+    background-color: @bg-backlight;
+}
+
+#network {
+    background-color: @bg-network;
+}
+
+#network.disconnected {
+    background-color: @network-disconnected;
+}
+
+#pulseaudio {
+    background-color: @bg-pulseaudio;
+    color: @pulseaudio;
+}
+
+#pulseaudio.muted {
+    background-color: @bg-pulseaudio-muted;
+    color: @pulseaudio-muted;
+}
+
+#wireplumber {
+    background-color: @bg-wireplumber;
+    color: @wireplumber;
+}
+
+#wireplumber.muted {
+    background-color: @wireplumber-muted;
+}
+
+#custom-media {
+    background-color: @bg-media;
+    color: @media-text;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @bg-media;
+}
+
+#custom-media.custom-vlc {
+    background-color: @bg-vlc;
+}
+
+#temperature {
+    background-color: @bg-temp;
+}
+
+#temperature.critical {
+    background-color: @temp-critical;
+}
+
+#tray {
+    background-color: @tray-bg;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @tray-attention;
+}
+
+#idle_inhibitor {
+    background-color: @idle-inhibitor;
+}
+
+#idle_inhibitor.activated {
+    background-color: @idle-inhibitor-on;
+    color: @idle-inhibitor;
+}
+
+#mpd {
+    background-color: @mpd-bg;
+    color: @mpd-text;
+}
+
+#mpd.disconnected {
+    background-color: @mpd-disconnected;
+}
+
+#mpd.stopped {
+    background-color: @mpd-stopped;
+}
+
+#mpd.paused {
+    background-color: @mpd-paused;
+}
+
+#language {
+    background: @lang-bg;
+    color: @lang-text;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: @kb-bg;
+    color: @kb-text;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: @scratchpad-bg;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+
+
