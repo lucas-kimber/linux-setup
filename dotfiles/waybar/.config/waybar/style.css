@@ -3,7 +3,7 @@
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
-    border-radius: 1rem;
+    border-radius: 8px; 
     padding: 0.2rem;
 }
 
@@ -12,7 +12,8 @@ window#waybar {
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    border: 2px solid @border-bottom;
     padding: 4px 12px;
     margin: 7px 7px 7px 7px;
 }

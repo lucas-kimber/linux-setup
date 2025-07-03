@@ -10,10 +10,10 @@ __powerline() {
     # COLOR_GIT=${COLOR_GIT:-'\[\033[0;36m\]'} # cyan
     # COLOR_SUCCESS=${COLOR_SUCCESS:-'\[\033[0;32m\]'} # green
     # COLOR_FAILURE=${COLOR_FAILURE:-'\[\033[0;32m\]'} # red
-    COLOR_CWD='\[\033[38;2;212;199;135m\]' # kanagawa yellow-ish
-    COLOR_GIT='\[\033[38;2;130;192;175m\]' # kanagawa cyan
-    COLOR_SUCCESS='\[\033[38;2;41;82;110m\]' # kanagawa dark blue (success)
-    COLOR_FAILURE='\[\033[38;2;41;82;110m\]' # kanagawa dark blue (failure)
+    COLOR_CWD='\[\033[38;2;220;215;186m\]' # kanagawa yellow-ish
+    COLOR_GIT='\[\033[38;2;126;156;216m\]' # kanagawa blue
+    COLOR_SUCCESS='\[\033[38;2;126;156;216m\]' # kanagawa blue (success)
+    COLOR_FAILURE='\[\033[38;2;126;156;216m\]' # kanagawa blue (failure)
     # Symbols
     SYMBOL_GIT_BRANCH=${SYMBOL_GIT_BRANCH:- }
     SYMBOL_GIT_MODIFIED=${SYMBOL_GIT_MODIFIED:-*}

@@ -1,6 +1,11 @@
 /* === General === */
-@define-color background          #1F1F28; /* rgba(43, 48, 59, 0.5); */
-@define-color border-bottom       rgba(100, 114, 125, 0.5);
+/* @define-color background          #1F1F28; /1* rgba(43, 48, 59, 0.5); *1/ */
+/* @define-color background rgba(31, 31, 40, 0.55); */
+/* @define-color background rgba(126, 156, 216, 0.95); */
+@define-color background #7E9CD8;
+@define-color transparent rgba(0, 0, 0, 0);
+/* @define-color background rgba(24, 22, 22, 0.93); */
+@define-color border-bottom       #1F1F28;
 @define-color text                #ffffff;
 @define-color text-dark           #000000;
 
