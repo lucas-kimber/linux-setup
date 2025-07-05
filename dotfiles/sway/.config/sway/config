@@ -109,7 +109,7 @@ gaps inner 7
 output eDP-1 resolution 3840x2160@30Hz scale 2 position 0 0
 
 # Dell external monitor (right)
-output HDMI-A-1 resolution 3840x2160@30Hz scale 1 position 3840 0 adaptive_sync on
+output HDMI-A-1 resolution 3840x2160@30Hz scale 1 position 1920 0 adaptive_sync on
 
 #
 # App shortcuts

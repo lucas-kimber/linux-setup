@@ -31,3 +31,4 @@ export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland
 export ELECTRON_OZONE_PLATFORM_HINT=auto
 
+. "$HOME/.cargo/env"

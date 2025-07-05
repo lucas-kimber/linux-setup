@@ -3,19 +3,16 @@
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
-    border-radius: 8px; 
-    padding: 0.2rem;
+    border-radius: 8px;
+    padding: 2px 6px;
 }
 
 window#waybar {
-    background-color: @background;
-    color: @text;
-    transition-property: background-color;
-    transition-duration: .5s;
-    /* border-radius: 20px; */
-    border: 2px solid @border-bottom;
+    background-color: @cornflower;
+    color: @white;
+    border: 2px solid @charcoal;
     padding: 4px 12px;
-    margin: 7px 7px 7px 7px;
+    margin: 7px;
 }
 
 window#waybar.hidden {
@@ -27,70 +24,43 @@ window#waybar.termite {
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: @black;
 }
 
 button {
-    box-shadow: inset 0 -3px transparent;
     border: none;
     border-radius: 0;
+    box-shadow: inset 0 -3px transparent;
 }
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @hover-shadow;
+    box-shadow: inset 0 -3px @white;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 2px 8px;
     background-color: transparent;
-    color: @text;
+    color: @white;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.visible {
-    box-shadow: inset 0 -3px @hover-shadow;
-}
-
-
 #workspaces button.focused {
-    background-color: @background;
+    background-color: @cornflower;
+    box-shadow: inset 0 -3px @white;
 }
 
 #workspaces button.urgent {
-    background-color: @workspace-urgent;
+    background-color: @red;
 }
 
 #mode {
-    background-color: @mode-bg;
-    border-bottom: 3px solid @mode-border;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
-    padding: 0 10px;
-    color: @text;
-}
-
-#window,
-#workspaces {
+    background-color: @slate;
+    border-bottom: 3px solid @white;
+    padding: 2px 10px;
     margin: 0 4px;
 }
 
@@ -102,177 +72,54 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: @bg-clock;
-}
-
-#battery {
-    background-color: @bg-battery;
-    color: @battery;
-}
-
-#battery.charging, #battery.plugged {
-    color: @text;
-    background-color: @battery-charging;
-}
+#clock { background-color: @slate; color: @white; padding: 2px 10px; margin: 0 4px; }
+#battery { background-color: @white; color: @black; padding: 2px 10px; margin: 0 4px; }
+#battery.charging, #battery.plugged { background-color: @lime; color: @white; }
+#battery.critical:not(.charging) { background-color: @bright-red; color: @white; animation: blink 0.5s linear infinite alternate; }
 
 @keyframes blink {
-    to {
-        background-color: @text;
-        color: @text-dark;
-    }
+    to { background-color: @white; color: @black; }
 }
 
-#battery.critical:not(.charging) {
-    background-color: @battery-critical-bg;
-    color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+#cpu { background-color: @olive-green; color: @black; padding: 2px 10px; margin: 0 4px; }
+#memory { background-color: @lilac; padding: 2px 10px; margin: 0 4px; }
+#disk { background-color: @sand; padding: 2px 10px; margin: 0 4px; }
+#temperature { background-color: @wheat; padding: 2px 10px; margin: 0 4px; }
+#temperature.critical { background-color: @red; }
 
-label:focus {
-    background-color: @text-dark;
-}
+#backlight { background-color: @seafoam; padding: 2px 10px; margin: 0 4px; }
+#network { background-color: @slate; padding: 2px 10px; margin: 0 4px; }
+#network.disconnected { background-color: @red; }
 
-#cpu {
-    background-color: @bg-cpu;
-    color: @text-dark;
-}
+#pulseaudio { background-color: @amber; color: @black; padding: 2px 10px; margin: 0 4px; }
+#pulseaudio.muted { background-color: @seafoam; color: @olive-green; }
 
-#memory {
-    background-color: @bg-memory;
-}
+#wireplumber { background-color: @cream; color: @black; padding: 2px 10px; margin: 0 4px; }
+#wireplumber.muted { background-color: @red; }
 
-#disk {
-    background-color: @bg-disk;
-}
+#custom-media { background-color: @seafoam; color: @olive-green; padding: 2px 10px; margin: 0 4px; min-width: 100px; }
+#custom-media.custom-vlc { background-color: @amber; }
 
-#backlight {
-    background-color: @bg-backlight;
-}
+#tray { background-color: @deep-navy; padding: 2px 10px; margin: 0 4px; }
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention { -gtk-icon-effect: highlight; background-color: @red; }
 
-#network {
-    background-color: @bg-network;
-}
+#idle_inhibitor { background-color: @slate; padding: 2px 10px; margin: 0 4px; }
+#idle_inhibitor.activated { background-color: @beige; color: @slate; }
 
-#network.disconnected {
-    background-color: @network-disconnected;
-}
+#mpd { background-color: @seafoam; color: @olive-green; padding: 2px 10px; margin: 0 4px; }
+#mpd.disconnected { background-color: @red; }
+#mpd.stopped { background-color: @seafoam; }
+#mpd.paused { background-color: @lime; }
 
-#pulseaudio {
-    background-color: @bg-pulseaudio;
-    color: @pulseaudio;
-}
+#language { background-color: @teal; color: @lavender-grey; padding: 2px 8px; margin: 0 4px; min-width: 16px; }
 
-#pulseaudio.muted {
-    background-color: @bg-pulseaudio-muted;
-    color: @pulseaudio-muted;
-}
+#keyboard-state { background-color: @lime; color: @black; padding: 2px 8px; margin: 0 4px; min-width: 16px; }
+#keyboard-state > label { padding: 0 5px; }
+#keyboard-state > label.locked { background-color: rgba(0, 0, 0, 0.2); }
 
-#wireplumber {
-    background-color: @bg-wireplumber;
-    color: @wireplumber;
-}
+#scratchpad { background-color: rgba(0, 0, 0, 0.2); padding: 2px 10px; margin: 0 4px; }
+#scratchpad.empty { background-color: transparent; }
 
-#wireplumber.muted {
-    background-color: @wireplumber-muted;
-}
-
-#custom-media {
-    background-color: @bg-media;
-    color: @media-text;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: @bg-media;
-}
-
-#custom-media.custom-vlc {
-    background-color: @bg-vlc;
-}
-
-#temperature {
-    background-color: @bg-temp;
-}
-
-#temperature.critical {
-    background-color: @temp-critical;
-}
-
-#tray {
-    background-color: @tray-bg;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @tray-attention;
-}
-
-#idle_inhibitor {
-    background-color: @idle-inhibitor;
-}
-
-#idle_inhibitor.activated {
-    background-color: @idle-inhibitor-on;
-    color: @idle-inhibitor;
-}
-
-#mpd {
-    background-color: @mpd-bg;
-    color: @mpd-text;
-}
-
-#mpd.disconnected {
-    background-color: @mpd-disconnected;
-}
-
-#mpd.stopped {
-    background-color: @mpd-stopped;
-}
-
-#mpd.paused {
-    background-color: @mpd-paused;
-}
-
-#language {
-    background: @lang-bg;
-    color: @lang-text;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: @kb-bg;
-    color: @kb-text;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: @scratchpad-bg;
-}
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
-
+label:focus { background-color: @black; }
 

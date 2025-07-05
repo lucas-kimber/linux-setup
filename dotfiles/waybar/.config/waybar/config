@@ -27,7 +27,7 @@
     //   "all-outputs": true,
          "warp-on-scroll": false,
          "format-focused": ">{name}",
-    //     "format-icons": {
+         "format-icons": {
     //         "1": "",
     //         "2": "",
     //         "3": "",
@@ -36,7 +36,7 @@
     //         "urgent": "",
     //         "focused": "",
     //         "default": ""
-    //     }
+         }
     },
     "clock#date": {
         "format": "{:%A, %b %d}", // Example: Sunday, Jun 08

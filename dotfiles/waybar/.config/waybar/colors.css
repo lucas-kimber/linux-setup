@@ -1,70 +1,27 @@
-/* === General === */
-/* @define-color background          #1F1F28; /1* rgba(43, 48, 59, 0.5); *1/ */
-/* @define-color background rgba(31, 31, 40, 0.55); */
-/* @define-color background rgba(126, 156, 216, 0.95); */
-@define-color background #7E9CD8;
-@define-color transparent rgba(0, 0, 0, 0);
-/* @define-color background rgba(24, 22, 22, 0.93); */
-@define-color border-bottom       #1F1F28;
-@define-color text                #ffffff;
-@define-color text-dark           #000000;
 
-/* === Workspaces === */
-@define-color workspace-focused   #7FB4CA;
-@define-color workspace-urgent    #eb4d4b;
-@define-color hover-shadow        #ffffff;
+/* === Base Colors === */
+@define-color black              #000000;
+@define-color white              #ffffff;
+@define-color transparent        rgba(0, 0, 0, 0);
 
-/* === Mode === */
-@define-color mode-bg             #64727D;
-@define-color mode-border         #ffffff;
-
-/* === Modules === */
-@define-color bg-clock            #64727D;
-@define-color bg-battery          #ffffff;
-@define-color battery             #000000;
-@define-color battery-charging    #26A65B;
-@define-color battery-critical-bg #f53c3c;
-
-@define-color bg-cpu              #2ecc71;
-@define-color bg-memory           #9b59b6;
-@define-color bg-disk             #964B00;
-@define-color bg-backlight        #90b1b1;
-@define-color bg-network          #64727D;
-@define-color network-disconnected #f53c3c;
-
-@define-color bg-pulseaudio       #f1c40f;
-@define-color pulseaudio          #000000;
-@define-color bg-pulseaudio-muted #90b1b1;
-@define-color pulseaudio-muted    #2a5c45;
-
-@define-color bg-wireplumber      #fff0f5;
-@define-color wireplumber         #000000;
-@define-color wireplumber-muted   #f53c3c;
-
-@define-color bg-media            #66cc99;
-@define-color media-text          #2a5c45;
-@define-color bg-vlc              #ffa000;
-
-@define-color bg-temp             #f0932b;
-@define-color temp-critical       #eb4d4b;
-
-@define-color tray-bg             #2980b9;
-@define-color tray-attention      #eb4d4b;
-
-@define-color idle-inhibitor      #2d3436;
-@define-color idle-inhibitor-on   #ecf0f1;
-
-@define-color mpd-bg              #66cc99;
-@define-color mpd-text            #2a5c45;
-@define-color mpd-disconnected    #f53c3c;
-@define-color mpd-stopped         #90b1b1;
-@define-color mpd-paused          #51a37a;
-
-@define-color lang-bg             #00b093;
-@define-color lang-text           #740864;
-
-@define-color kb-bg               #97e1ad;
-@define-color kb-text             #000000;
-
-@define-color scratchpad-bg       rgba(0, 0, 0, 0.2);
+/* === Custom Palette === */
+@define-color deep-navy         #090618;
+@define-color red               #C34043;
+@define-color olive-green       #76946A;
+@define-color sand              #C0A36E;
+@define-color cornflower        #7E9CD8;
+@define-color lilac             #957FB8;
+@define-color seafoam           #6A9589;
+@define-color beige             #C8C093;
+@define-color slate             #727169;
+@define-color bright-red        #E82424;
+@define-color lime              #98BB6C;
+@define-color wheat             #E6C384;
+@define-color light-blue        #7FB4CA;
+@define-color lavender-grey     #938AA9;
+@define-color teal              #7AA89F;
+@define-color cream             #DCD7BA;
+@define-color amber             #FFA066;
+@define-color salmon            #FF5D62;
+@define-color charcoal          #1F1F28;
 
