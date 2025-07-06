@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -117,7 +117,7 @@ output HDMI-A-1 resolution 3840x2160@30Hz scale 1 position 1920 0 adaptive_sync 
 
 bindsym $mod+Shift+Return exec firefox
 bindsym $mod+Shift+v exec code
-
+bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%F-%H%M%S).png - | tee ~/Pictures/screenshot.png | wl-copy
 #
 # Colours
 #
@@ -285,3 +285,4 @@ include /etc/sway/config.d/*
 
 # Transparency
  for_window [class="Code"] opacity 0.93
+ for_window [app_id="foot"] opacity 0.93

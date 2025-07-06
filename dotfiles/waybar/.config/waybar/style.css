@@ -126,7 +126,7 @@ button:hover {
 /* === Individual Module Styling === */
 #clock { color: @white; }
 
-#battery { color: @white; }
+#battery { color: @white; padding-right: 23; }
 #battery.charging, #battery.plugged { background-color: @lime; color: @white; }
 #battery.critical:not(.charging) { background-color: @bright-red; color: @white; animation: blink 0.5s linear infinite alternate; }
 
@@ -141,7 +141,7 @@ button:hover {
 #temperature.critical { background-color: @red; }
 
 #backlight { background-color: @seafoam; }
-#network { }
+#network { padding-right: 23; }
 #network.disconnected { background-color: @red; }
 
 #pulseaudio { background-color: @amber; color: @black; }
