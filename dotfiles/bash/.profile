@@ -32,3 +32,5 @@ export QT_QPA_PLATFORM=wayland
 export ELECTRON_OZONE_PLATFORM_HINT=auto
 
 . "$HOME/.cargo/env"
+export GTK_THEME="Kanagawa"
+

@@ -128,3 +128,9 @@ eval SSH_AUTH_SOCK=/tmp/ssh-npm6oxZ6yB2p/agent.937667; export SSH_AUTH_SOCK;
 SSH_AGENT_PID=937668; export SSH_AGENT_PID;
 . "$HOME/.cargo/env"
 alias imv='imv-wayland'
+if [ "$TERM" = "foot" ] && [ -n "$SSH_CONNECTION" ]; then
+    export TERM=xterm-256color
+fi
+
+
+export PATH=$PATH:/home/lucas/.spicetify
